@@ -1,0 +1,10 @@
+//save data Activity
+
+
+final SharedPreferences sharedPreferences = getSharedPreferences("data", Context.MODE_PRIVATE);
+
+        binding.save.setOnClickListener(v -> {
+            SharedPreferences.Editor editor = sharedPreferences.edit();
+            editor.putString("password",binding.editText.getText().toString());
+            editor.commit();
+        });

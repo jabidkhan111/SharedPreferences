@@ -1,0 +1,5 @@
+// show data Activity
+
+final SharedPreferences sharedPreferences = getSharedPreferences("data", Context.MODE_PRIVATE);
+
+        binding.textView.setText(sharedPreferences.getString("password",""));
