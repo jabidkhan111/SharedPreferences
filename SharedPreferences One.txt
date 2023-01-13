@@ -1,6 +1,5 @@
+java
 //save data Activity
-
-
 final SharedPreferences sharedPreferences = getSharedPreferences("data", Context.MODE_PRIVATE);
 
         binding.save.setOnClickListener(v -> {
@@ -8,3 +7,12 @@ final SharedPreferences sharedPreferences = getSharedPreferences("data", Context
             editor.putString("password",binding.editText.getText().toString());
             editor.commit();
         });
+       
+Kotlin
+//save data Activity
+
+    val preferences = this.getSharedPreferences("user", MODE_PRIVATE)
+        val editor = preferences.edit()
+        editor.putString("number",binding.userNumber.text.toString())
+        editor.putString("name",binding.userName.text.toString())
+        editor.apply()
