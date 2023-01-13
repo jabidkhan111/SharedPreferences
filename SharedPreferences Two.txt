@@ -1,5 +1,11 @@
+Java
 // show data Activity
-
 final SharedPreferences sharedPreferences = getSharedPreferences("data", Context.MODE_PRIVATE);
+binding.textView.setText(sharedPreferences.getString("password",""));
 
-        binding.textView.setText(sharedPreferences.getString("password",""));
+Kotlin
+//how data Activity
+val preferences = this.getSharedPreferences("user", MODE_PRIVATE)
+                    val editor = preferences.edit()
+                    editor.putString("number",intent.getStringExtra("number"))
+                    editor.apply()
